@@ -1,5 +1,6 @@
 class Button {
-  constructor(height, width, color, type, props) {
+  constructor(label, height, width, color, type, props) {
+    this.label = label;
     this.height = height;
     this.width = width;
     this.color = color;
@@ -18,9 +19,9 @@ class Button {
       this.color == "green" &&
       this.type == "button"
     ) {
-      console.log("The button is correct!");
+      console.log(`The button "${this.label}" is correct!`);
     } else {
-      console.log(" The button isn't correct:");
+      console.log(`The button "${this.label}" isn't correct:`);
     }
 
     if (typeof this.height != "number") {
@@ -45,6 +46,10 @@ class Button {
   }
 }
 
-let mainButton = new Button("20", 30, "red", "button");
-mainButton.onClick();
-mainButton.testButton();
+let redButton = new Button("Help", "20", 30, "red", "button");
+redButton.onClick();
+redButton.testButton();
+
+let greenButton = new Button("Start", 30, 30, "green", "button");
+greenButton.onClick();
+greenButton.testButton();
