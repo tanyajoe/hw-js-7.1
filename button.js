@@ -19,9 +19,9 @@ class Button {
       this.color == "green" &&
       this.type == "button"
     ) {
-      console.log(`The button "${this.label}" is correct!`);
+      console.log(`The button with label "${this.label}" is correct!`);
     } else {
-      console.log(`The button "${this.label}" isn't correct:`);
+      console.log(`The button with label "${this.label}" isn't correct:`);
     }
 
     if (typeof this.height != "number") {
